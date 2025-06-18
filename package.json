@@ -1,0 +1,27 @@
+{
+  "name": "genrandomprofiles",
+  "version": "1.0.0",
+  "description": "Generates random profiles based on ethnicity and age range",
+  "keywords": [
+    "mock-data",
+    "random-data",
+    "profile",
+    "generation",
+    "random"
+  ],
+  "homepage": "https://github.com/HemanRamlal/genRandomProfiles#readme",
+  "bugs": {
+    "url": "https://github.com/HemanRamlal/genRandomProfiles/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HemanRamlal/genRandomProfiles.git"
+  },
+  "license": "ISC",
+  "author": "HemanRamlal",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

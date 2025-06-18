@@ -26,6 +26,7 @@ Generates an array of user profile objects based on the specified ethnicity and 
 ## Example
 
 ```js
+const genRandomProfiles = require('genrandomprofiles');
 const profiles = genRandomProfiles(["russian", "indian"], 40, 10);
 console.log(profiles[0]);
 // {
