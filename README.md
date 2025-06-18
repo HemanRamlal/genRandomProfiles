@@ -11,7 +11,7 @@ Generates an array of user profile objects based on the specified ethnicity and 
 | Name         | Type       | Description                                                                 |
 |--------------|------------|-----------------------------------------------------------------------------|
 | `ethnicities`| `string[]` | Array of ethnicities to generate profiles from. Supported: `"american"`, `"russian"`, `"chinese"`, `"indian"` |
-| `ageRange`   | `number`   | Maximum age (inclusive). Profiles will be aged between 0 and `ageRange`.   |
+| `ageRange`   | `number[]` | Maximum age (inclusive). Profiles will be aged between `ageRange[0]` and `ageRange[1]`.   |
 | `count`      | `number`   | Number of profiles to generate.                                            |
 
 ## Returns
@@ -27,7 +27,7 @@ Generates an array of user profile objects based on the specified ethnicity and 
 
 ```js
 const genRandomProfiles = require('genrandomprofiles');
-const profiles = genRandomProfiles(["russian", "indian"], 40, 10);
+const profiles = genRandomProfiles(["russian", "indian"], [18, 40], 10);
 console.log(profiles[0]);
 // {
 //   loginId: "user1987",
