@@ -12,15 +12,15 @@ function pickRandomItem(array){
 
 /*
  * Generate `count` profiles belonging to given `ethnicities`,
- * ageing between 0 to `ageRange` years, 
+ * aging within given `ageRange.
  * @param {[string]} `ethnicities` - An array of `ethnicities`, currently supports "american" "russian" "chinese" "indian"
- * @param {number} `ageRange` - The generated profiles will be of age between range [0-`ageRange`]
+ * @param {[number]} `ageRange` - The generated profiles will be of age between range [`ageRange[0]`-`ageRange[1]`]
  * @returns {[object]} Array of objects with keys `loginId`, `fullName`, `email`, `dob`
  */
 
 module.exports = function(ethnicities, ageRange, count){
   if(ethnicities.length == 0 ||
-    ageRange < 0 ||
+    ageRange[0] < 0 ||
     count <=0
   ) return [];
 
@@ -47,7 +47,7 @@ module.exports = function(ethnicities, ageRange, count){
     const lName = pickRandomItem(ethnicNamesData[ethnicity].firstNames);
 
     let dob = new Date(Date.now() - Math.floor(Math.random() * 365*24*60*60*1000));
-    subYears(dob, Math.floor(Math.random()*(ageRange+1)));
+    subYears(dob, ageRange[0] + Math.floor(Math.random()*(ageRange[1]+1)));
 
     profiles.push({
       loginId : (fName+lName+dob.getFullYear()).toLowerCase(),
