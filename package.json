@@ -1,6 +1,6 @@
 {
   "name": "genrandomprofiles",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Generates random profiles based on ethnicity and age range",
   "keywords": [
     "mock-data",
